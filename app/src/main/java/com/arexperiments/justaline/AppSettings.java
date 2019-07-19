@@ -34,7 +34,16 @@ import javax.vecmath.Vector3f;
 
 public class AppSettings {
 
-    private static final Vector3f color = new Vector3f(1f, 1f, 1f);
+
+    public static final Vector3f WHITE = new Vector3f(1f, 1f, 1f);
+    public static final Vector3f RED = new Vector3f(1f, 0f, 0f);
+    public static final Vector3f GREEN = new Vector3f(0f, 1f, 0f);
+    public static final Vector3f BLUE = new Vector3f(0f, 0f, 1f);
+    public static final Vector3f YELLOW = new Vector3f(1f, 1f, 0f);
+    public static final Vector3f PURPLE = new Vector3f(0.8f, 0f, 0.8f);
+
+    public static Vector3f color = WHITE;
+
 
     private static final float strokeDrawDistance = 0.13f;
 
@@ -71,6 +80,7 @@ public class AppSettings {
     public static Vector3f getColor() {
         return color;
     }
+
 
     public static float getMinDistance() {
         return minDistance;

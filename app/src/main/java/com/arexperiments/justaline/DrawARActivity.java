@@ -46,6 +46,7 @@ import com.arexperiments.justaline.rendering.LineUtils;
 import com.arexperiments.justaline.rendering.PointCloudRenderer;
 import com.arexperiments.justaline.view.BrushSelector;
 import com.arexperiments.justaline.view.ClearDrawingDialog;
+import com.arexperiments.justaline.view.ColorSelector;
 import com.arexperiments.justaline.view.DebugView;
 import com.arexperiments.justaline.view.ErrorDialog;
 import com.arexperiments.justaline.view.LeaveRoomDialog;
@@ -167,6 +168,7 @@ public class DrawARActivity extends BaseActivity
     private File mOutputFile;
 
     private BrushSelector mBrushSelector;
+    private ColorSelector mColorSelector;
 
     private RecordButton mRecordButton;
 
@@ -927,6 +929,11 @@ public class DrawARActivity extends BaseActivity
         if (isOutsideViewBounds(mBrushSelector, (int) tap.getRawX(), (int) tap.getRawY())
                 && mBrushSelector.isOpen()) {
             mBrushSelector.close();
+        }
+
+        if (isOutsideViewBounds(mColorSelector, (int) tap.getRawX(), (int) tap.getRawY())
+                && mColorSelector.isOpen()) {
+            mColorSelector.close();
         }
         if (isOutsideViewBounds(mPairButtonToolTip, (int) tap.getRawX(), (int) tap.getRawY())
                 && mPairButtonToolTip.getVisibility() == View.VISIBLE) {
