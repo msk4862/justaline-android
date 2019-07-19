@@ -263,6 +263,8 @@ public class DrawARActivity extends BaseActivity
         // set up brush selector
         mBrushSelector = findViewById(R.id.brush_selector);
 
+        mColorSelector = findViewById(R.id.color_selector);
+
         mRecordButton = findViewById(R.id.record_button);
         mRecordButton.setEnabled(false);
 
@@ -1116,6 +1118,7 @@ public class DrawARActivity extends BaseActivity
                 break;
         }
         mBrushSelector.close();
+        mColorSelector.close();
         if (hideOverflow) {
             hideOverflowMenu();
         }
